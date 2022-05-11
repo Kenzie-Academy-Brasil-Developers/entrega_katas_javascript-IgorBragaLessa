@@ -71,3 +71,113 @@ function somaElementos(array){
     }
 }
 console.log(somaElementos([3,1,2]))
+
+//Crie uma funçao que recebe um array como parâmetro e retorne outro array,
+// onde cada elemento desse novo array é igual ao elemento do array do parâmetro mais 5.
+function arrayMaisCinco(array){
+    let arrayRetornado = []
+    for(i=0; i<array.length; i++){
+        arrayRetornado.push(array[i]+5 )
+    }
+    return arrayRetornado
+}
+console.log(arrayMaisCinco([5,10,15]))
+
+//Crie uma função que recebe um array como parâmetro e calcule a média dos valores contidos nesse array.
+// Depois disso, crie outro array e inclua nele apenas os elementos do array do parâmetro que sejam maiores 
+//que a média calculada.
+function arrayMedias(array){
+    let somaValores= 0
+    let mediaValores= 0
+    let elementosMaioresMedia= []
+    for(i=0; i <array.length; i++){
+        somaValores= somaValores + array[i]
+        
+    }
+    mediaValores= somaValores/ array.length
+    for( i=0; i < array.length; i++){
+        if(mediaValores< array[i]){
+            elementosMaioresMedia.push(array[i])
+        }
+    }
+        
+       return elementosMaioresMedia 
+}
+console.log(arrayMedias([10, 4, 2, 1]))
+
+
+//Crie uma função que recebe uma string como parâmetro, 
+//e retorna a quantidade de letras ‘a’ que existem nessa string     
+function selecionarA(string){
+    let quantidadeDeA= 0
+    for(i=0; i< string.length; i++){
+        if (string[i] == 'a'){
+            quantidadeDeA++
+        }
+    }
+    return quantidadeDeA
+}
+console.log (selecionarA('barata'))
+
+//Crie uma função que recebe um array contendo somente strings, 
+//e retorna a soma do comprimento de todas as strings deste array.
+function somenteStrings(array){
+    let somaComprimento= 0
+    for(i=0; i< array.length;i++){
+        somaComprimento += array[i].length
+    }
+    return somaComprimento
+}
+console.log(somenteStrings(['verde','azul','rosa']))
+
+
+//Crie uma função que recebe uma frase (uma string) como parâmetro, 
+//e retorna um array contendo todas as palavras dessa frase que possuem um comprimento ímpar,
+// ou seja, que possuem uma quantidade ímpar de letras.
+function recebeFrase(frase){
+    let retornoImpares=[]
+    let string= frase.split(' ')
+    for(i=0; i< string.length; i++){
+        if(string[i].length %2 != 0){
+            retornoImpares.push(string[i])
+        }
+    }
+    return retornoImpares
+}
+console.log(recebeFrase('Eu sou feliz'))
+
+//Crie uma função que recebe uma string como parâmetro, 
+//e retorna uma string igual à que foi passada por parâmetro, mas com ‘0’ (zeros) no lugar das letras ‘o’.
+
+function recebeString(string){
+    let stringResultante=''
+    for(i=0; i< string.length;i++){
+        if(string[i] == 'o'){
+        stringResultante += '0'
+    } else{
+            stringResultante += string[i]
+    }
+    }
+    return stringResultante
+}
+console.log(recebeString('Iodo'))
+
+//Crie uma função que recebe uma string como 
+//parâmetro e retorna uma string igual à que foi passada por parâmetro,
+// mas com todos os ‘p’ (minúsculos) trocados por ‘P’ (maiúsculos).
+function recebendoString(string){
+    let retornaP= ''
+    for( i=0; i< string.length ; i++){
+        if( string[i]== 'p'){
+            retornaP += 'P'
+        } else{
+            retornaP += string[i]
+        }
+    }
+    return retornaP
+}
+console.log( recebendoString('eu gosto do meu pai'))
+
+
+
+
