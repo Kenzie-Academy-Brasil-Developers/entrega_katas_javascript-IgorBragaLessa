@@ -1,3 +1,4 @@
+
 //Crie uma função que recebe um array como parâmetro e retorna quantos números 
 //negativos tem nesse mesmo array.
 function negativos(array){
@@ -177,6 +178,7 @@ function recebendoString(string){
     return retornaP
 }
 console.log( recebendoString('eu gosto do meu pai'))
+
 
 
 
